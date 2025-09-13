@@ -1,0 +1,160 @@
+{
+  "id": "hit-devops-project-tests",
+  "version": "2.0",
+  "name": "HIT DevOps Project Tests",
+  "url": "http://localhost:8080/eliran-nimrod-saar-nikita-ido/",
+  "tests": [{
+    "id": "form-validation-test",
+    "name": "Form Validation Test",
+    "commands": [{
+      "id": "open-homepage",
+      "comment": "Open the application homepage",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-title",
+      "comment": "Verify page title contains HIT DevOps Project",
+      "command": "assertTitle",
+      "target": "HIT DevOps Project - User Management System",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-form-fields",
+      "comment": "Verify all form fields are present",
+      "command": "assertElementPresent",
+      "target": "id=name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-email-field",
+      "command": "assertElementPresent",
+      "target": "id=email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-password-field",
+      "command": "assertElementPresent",
+      "target": "id=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-register-button",
+      "command": "assertElementPresent",
+      "target": "css=button[type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "user-registration-test",
+    "name": "User Registration Test",
+    "commands": [{
+      "id": "open-homepage",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fill-name",
+      "comment": "Fill in the name field",
+      "command": "type",
+      "target": "id=name",
+      "targets": [],
+      "value": "Test User Selenium"
+    }, {
+      "id": "fill-email",
+      "comment": "Fill in the email field",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "test.selenium@example.com"
+    }, {
+      "id": "fill-password",
+      "comment": "Fill in the password field",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "password123"
+    }, {
+      "id": "submit-form",
+      "comment": "Submit the registration form",
+      "command": "click",
+      "target": "css=button[type='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-success-message",
+      "comment": "Verify success message appears",
+      "command": "assertText",
+      "target": "css=.success",
+      "targets": [],
+      "value": "User registered successfully!"
+    }]
+  }, {
+    "id": "navigation-test",
+    "name": "Navigation Test",
+    "commands": [{
+      "id": "open-homepage",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-view-users",
+      "comment": "Click on View All Users link",
+      "command": "click",
+      "target": "link=View All Users",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-view-users-page",
+      "comment": "Verify we're on the view users page",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [],
+      "value": "Registered Users"
+    }, {
+      "id": "click-stats-link",
+      "comment": "Click on Application Stats link",
+      "command": "click",
+      "target": "link=Application Stats",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-stats-page",
+      "comment": "Verify we're on the stats page",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [],
+      "value": "Application Statistics"
+    }, {
+      "id": "click-test-page",
+      "comment": "Click on Test Page link",
+      "command": "click",
+      "target": "link=Test Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "verify-test-page",
+      "comment": "Verify we're on the test page",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [],
+      "value": "Test Page"
+    }]
+  }],
+  "suites": [{
+    "id": "default-suite",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["form-validation-test", "user-registration-test", "navigation-test"]
+  }],
+  "urls": ["http://localhost:8080/eliran-nimrod-saar-nikita-ido/"],
+  "plugins": [],
+  "timeouts": {
+    "implicit": 0
+  }
+}
