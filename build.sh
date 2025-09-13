@@ -15,4 +15,9 @@ cp -r WEB-INF tomcat/webapps/ROOT/
 # Make Tomcat executable
 chmod +x tomcat/bin/*.sh
 
+# Create startup script
+echo '#!/bin/bash' > start.sh
+echo 'tomcat/bin/catalina.sh run' >> start.sh
+chmod +x start.sh
+
 echo "Build completed successfully!"
