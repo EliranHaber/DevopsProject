@@ -2,7 +2,7 @@
   "id": "hit-devops-project-tests",
   "version": "2.0",
   "name": "HIT DevOps Project Tests",
-  "url": "http://localhost:8080/eliran-nimrod-saar-nikita-ido/",
+  "url": "https://devopsproject-vlco.onrender.com",
   "tests": [{
     "id": "form-validation-test",
     "name": "Form Validation Test",
@@ -152,7 +152,7 @@
     "timeout": 300,
     "tests": ["form-validation-test", "user-registration-test", "navigation-test"]
   }],
-  "urls": ["http://localhost:8080/eliran-nimrod-saar-nikita-ido/"],
+  "urls": ["https://devopsproject-vlco.onrender.com"],
   "plugins": [],
   "timeouts": {
     "implicit": 0

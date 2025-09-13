@@ -2,6 +2,10 @@
 # Build script for Render deployment
 echo "Building HIT DevOps Project..."
 
+# Install Java
+apt-get update
+apt-get install -y openjdk-8-jdk
+
 # Create target directory
 mkdir -p target
 
