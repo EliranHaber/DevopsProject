@@ -113,7 +113,7 @@
       "command": "assertText",
       "target": "css=h3",
       "targets": [],
-      "value": "Registered Users"
+      "value": "Registered Users (0 total)"
     }, {
       "id": "click-stats-link",
       "comment": "Click on Application Stats link",
