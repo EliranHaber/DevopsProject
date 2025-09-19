@@ -33,7 +33,7 @@ User Management System built with JSP demonstrating a complete DevOps pipeline f
 ├── Dockerfile                   # Container configuration
 ├── gatling-tests/              # Performance tests
 ├── selenium-tests/             # Functional tests
-└── WEB-INF/                    # Web configuration
+└── web/                    # Web configuration
 ```
 
 ## Testing
