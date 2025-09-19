@@ -1,7 +1,7 @@
 {
-  "id": "hit-devops-project-tests",
+  "id": "selenium-test",
   "version": "2.0",
-  "name": "HIT DevOps Project Tests",
+  "name": "SeleniumTest",
   "url": "https://devopsproject-1-6y4f.onrender.com",
   "tests": [{
     "id": "form-validation-test",
