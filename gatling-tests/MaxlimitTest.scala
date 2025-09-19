@@ -2,7 +2,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class UserManagementSimulationMaxLimit extends Simulation {
+class MaxlimitTest extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://devopsproject-1-6y4f.onrender.com")

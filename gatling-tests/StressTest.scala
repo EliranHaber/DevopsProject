@@ -2,7 +2,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class UserManagementSimulationStressTest extends Simulation {
+class StressTest extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://devopsproject-1-6y4f.onrender.com")
