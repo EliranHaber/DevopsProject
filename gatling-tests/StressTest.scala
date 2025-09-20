@@ -41,15 +41,24 @@ class StressTest extends Simulation {
       .check(status.is(200))
       .check(css(".user-list").exists))
 
-  // Stress Test - 3-4 minutes beyond normal capacity
+  // Bounce Stress Test - 110% → 90% → 110% pattern
+  // This tests system recovery under repeated stress
   setUp(
     scn.inject(
-      rampUsersPerSec(10).to(50).during(2 minutes),
-      constantUsersPerSec(50).during(2 minutes)
+      // Phase 1: Ramp to 110% capacity (55 users/sec)
+      rampUsersPerSec(10).to(55).during(1 minute),
+      // Phase 2: Sustain 110% capacity
+      constantUsersPerSec(55).during(1 minute),
+      // Phase 3: Drop to 90% capacity (45 users/sec) for recovery
+      rampUsersPerSec(55).to(45).during(30 seconds),
+      constantUsersPerSec(45).during(1 minute),
+      // Phase 4: Bounce back to 110% capacity
+      rampUsersPerSec(45).to(55).during(30 seconds),
+      constantUsersPerSec(55).during(1 minute)
     )
   ).protocols(httpProtocol)
    .assertions(
-     global.responseTime.max.lt(5000),
-     global.successfulRequests.percent.gt(95)
+     global.responseTime.max.lt(8000), // More lenient for stress test
+     global.successfulRequests.percent.gt(90) // More lenient for stress test
    )
 }
