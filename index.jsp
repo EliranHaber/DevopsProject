@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>HIT DevOps Project - User Management System</title>
+    <title>HIT DevOps Project - users Management System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
