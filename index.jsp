@@ -92,7 +92,7 @@
 <body>
     <div class="container">
         <h1>HIT DevOps Project</h1>
-        <h2>users Management System</h2>
+        <h2>Users Management System</h2>
         <p><strong>Team:</strong> Eliran Haber, Nimrod Aharon, Saar Shimshi, Nikita Konev, Ido Ronzenfeld</p>
         
         <%
